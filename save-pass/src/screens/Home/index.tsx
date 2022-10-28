@@ -1,12 +1,11 @@
 import { useCallback, useState } from "react";
 import { FlatList, Text, View } from "react-native";
 import { useAsyncStorage } from "@react-native-async-storage/async-storage";
-
-import { Card, CardProps } from "../../components/Card";
-import { HeaderHome } from "../../components/HeaderHome";
 import { useFocusEffect } from "@react-navigation/native";
 
 import { styles } from "./styles";
+import { Card, CardProps } from "../../components/Card";
+import { HeaderHome } from "../../components/HeaderHome";
 import { Button } from "../../components/Button";
 
 export function Home() {
@@ -56,7 +55,7 @@ export function Home() {
       />
 
       <View style={styles.footer}>
-        <Button title="Limpar lista" />
+        <Button title="Limpar lista" onPress={() => setData([])}/>
       </View>
     </View>
   );
